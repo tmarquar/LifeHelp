@@ -14,7 +14,16 @@
       "openFiles": [
         "src/App.js"
       ]
-    }
+    },
+    "vscode": {
+			"settings": {},
+			"extensions": [
+				"GitHub.copilot"
+				//"rangav.vscode-thunder-client",
+				//"Vue.volar",
+				//"ms-azuretools.vscode-docker"
+			]
+		}
   },
   "portsAttributes": {
     "3000": {
