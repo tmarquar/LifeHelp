@@ -2,27 +2,22 @@
 // and back to Home
 import React from 'react';
 
+// create a Header component that has navigation buttons in a row
+// the buttons will be Home, Create Recipe, and Settings
+// the buttons will navigate to the appropriate pages when clicked
+
 const Header = () => {
     return (
-        <header className="App-header">
-            <div>
-                <p>
-                <span className="heart">♥️</span>
-                </p>
-                <div>Test App</div>
+        <div className="header">
+            <h1>Recipe App</h1>
+            <div className="navButtons">
+                <button>Home</button>
+                <button onClick = {() => {window.location.href = '/createRecipe'}}>Create Recipe</button>
+                <button>Settings</button>
             </div>
-            <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-        </header>
+        </div>
     );
-    };
+}
+
 
 export default Header;

@@ -29,3 +29,20 @@
 .small {
   font-size: 0.75rem;
 }
+/* create a header bar with a dark theme */
+.header {
+  background-color: #282c34;
+  color: white;
+  padding: 1rem;
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav--link {
+  color: white;
+  margin-left: 1rem;
+}
