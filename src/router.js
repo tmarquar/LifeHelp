@@ -1,14 +1,13 @@
 // create react router routes for the Home, Create Recipe, Settings, and About pages
 import React from "react";
-import ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
-  RouterProvider,
 } from "react-router-dom";
 import Home from "./screens/home";
-import Header from "./components/header";
+import App from "./App";
 import CreateRecipe from "./components/createRecipe";
 import About from "./screens/about";
+import ErrorPage from "./screens/error";
 
 // create a Router component that will contain the routes for the Home, Create Recipe, Settings, and About pages
 // the routes will be /, /createRecipe, /settings, and /about
@@ -20,11 +19,12 @@ import About from "./screens/about";
 const MyRouter = createBrowserRouter([
         {
             path: "/",
-            element: <Header />,
+            element: <App />,
+            errorElement: <ErrorPage />,
 
             children: [
                 {
-                    path: "/home",
+                    path: "/",
                     element: <Home />,
                     
                 },

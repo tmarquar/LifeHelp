@@ -1,3 +1,6 @@
+// Super helpful link https://reactrouter.com/en/main/start/tutorial#handling-not-found-errors
+// Another helpful link //https://github.com/remix-run/react-router
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
@@ -6,6 +9,8 @@ import {
 } from "react-router-dom";
 import './index.css';
 import App from './App';
+import './App.css';
+
 import reportWebVitals from './reportWebVitals';
 import MyRouter from './router';
 
