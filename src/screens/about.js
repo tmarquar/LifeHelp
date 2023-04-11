@@ -6,7 +6,7 @@ const About = () => {
             <h1>About</h1>
             <p>
                 This is a website for people who want to make delicious food. 
-                It is a place where you can find recipes and create your own recipes.
+                It is a place wherde you can find recipes and create your own recipes.
             </p>
         </div>
     );
