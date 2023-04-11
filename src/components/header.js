@@ -14,7 +14,7 @@ const Header = () => {
         <div className="header">
             <h1>P🥔tato Potat🍅</h1>
             <div className="navButtons">
-                <button><Link to = {`home`}>Home</Link> </button>
+                <button><Link to = {``}>Home</Link> </button>
                 <button><Link to = {`createRecipe`}>Create Recipe</Link> </button>
                 <button>Settings</button>
                 <button> <Link to = {`about`}>about </Link> </button>
