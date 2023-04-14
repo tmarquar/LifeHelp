@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import Home from "./screens/home";
 import App from "./App";
-import CreateRecipe from "./components/createRecipe";
+import CreateRecipe from "./screens/createRecipe";
 import About from "./screens/about";
 import ErrorPage from "./screens/error";
 

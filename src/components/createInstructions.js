@@ -11,7 +11,7 @@ class CreateInstructions extends React.Component {
             <div className="createInstructions">
                 <h1>Instructions</h1>
                 <div className="instructionsForm">
-                    <MDEditor name="instructions" value={this.props.instructions} onChange={this.props.handleIngredientChange} />
+                    <MDEditor name="instructions" value={this.props.instructions} onChange={this.props.handleInstructionChange} />
                 </div>
             </div>
         );

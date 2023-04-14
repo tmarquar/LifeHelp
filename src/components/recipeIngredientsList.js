@@ -7,22 +7,17 @@ import Ingredient from './ingredient';
 // the user can edit the name of each ingredient
 class RecipeIngredientsList extends React.Component {
     render() {
-        return (
-            <div className="recipeIngredientsList">
-                <h1>Ingredients</h1>
-                <button>Add Ingredient</button>
-                <div className="ingredients">
-                    <ul>
-                        <Ingredient 
-                            quantity={this.props.ingredientList[0].quantity}
-                            unit={this.props.ingredientList[0].unit}
-                            ingredientName={this.props.ingredientList[0].ingredientName}
-                        />
-                    </ul>
-
-                </div>
-            </div>
-        );
+        return this.props.ingredientList.map((ingredient) => {
+            return (
+                <ul key={ingredient}>
+                    <Ingredient 
+                        quantity={ingredient.quantity}
+                        unit={ingredient.unit}
+                        ingredientName={ingredient.ingredientName}
+                    />
+                </ul>
+            );
+        });
     }
 }
 

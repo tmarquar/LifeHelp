@@ -1,7 +1,7 @@
 // A page that will allow the user to create a new recipe
 import React from 'react';
-import RecipeIngredientsList from './recipeIngredientsList';
-import CreateInstructions from './createInstructions';
+import RecipeIngredientsList from '../components/recipeIngredientsList';
+import CreateInstructions from '../components/createInstructions';
 
 // create a CreateRecipe component that will allow the user to create a new recipe
 // the user will be able to enter the name of the recipe, the ingredients, and the instructions
@@ -27,16 +27,21 @@ class CreateRecipe extends React.Component {
             instructions: 'Test'
         }
         this.handleChange = this.handleChange.bind(this);
-        this.handleIngredientChange = this.handleIngredientChange.bind(this);
+        this.handleInstructionChange = this.handleInstructionChange.bind(this);
     }
     handleChange(e) {
         this.setState({
             [e.target.name]: e.target.value
         });
     }
-    handleIngredientChange(e) {
+    handleInstructionChange(e) {
         this.setState({
             instructions: e
+        });
+    }
+    handleIngredientChange(e) {
+        this.setState({
+            ingredients: e
         });
     }
     render() {
@@ -48,14 +53,18 @@ class CreateRecipe extends React.Component {
                         <label>Recipe Name</label>
                         <input type="text" name="recipeName" value={this.state.recipeName} onChange={this.handleChange } />
                         {/* pass ingredientList to RecipeIngredientsList */}
-                        <RecipeIngredientsList 
-                            ingredientList={this.state.ingredients}
-                        
-                        />
-                        <label>Instructions:</label>
+                        <div className="recipeIngredientsList">
+                            <h1>Ingredients</h1>
+                            <button>Add Ingredient</button>
+                            <div className="ingredients"></div>
+                            <RecipeIngredientsList 
+                                ingredientList={this.state.ingredients}
+                                
+                            />
+                        </div>
                         <CreateInstructions 
                             instructions={this.state.instructions}
-                            handleIngredientChange={this.handleIngredientChange}
+                            handleInstructionChange={this.handleInstructionChange}
                         />
                         <button>Save</button>
                     </form>
